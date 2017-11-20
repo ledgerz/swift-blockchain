@@ -8,12 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		83D292D81FC30605006705B6 /* SwiftBlockchain.h in Headers */ = {isa = PBXBuildFile; fileRef = 83D292D61FC30605006705B6 /* SwiftBlockchain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83D292E81FC306AC006705B6 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D292E41FC306A3006705B6 /* CryptoSwift.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83D292E31FC306A3006705B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE45519693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+		83D292E51FC306A3006705B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 754BE46019693E190098E6F3;
+			remoteInfo = Tests;
+		};
+		83D292EB1FC31802006705B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 754BE45419693E190098E6F3;
+			remoteInfo = CryptoSwift;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		83D292D31FC30605006705B6 /* SwiftBlockchain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftBlockchain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D292D61FC30605006705B6 /* SwiftBlockchain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftBlockchain.h; sourceTree = "<group>"; };
 		83D292D71FC30605006705B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptoSwift.xcodeproj; path = CryptoSwift/CryptoSwift.xcodeproj; sourceTree = "<group>"; };
+		83D292E91FC317A0006705B6 /* SwiftBlockchain.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SwiftBlockchain.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83D292E81FC306AC006705B6 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,8 +58,11 @@
 		83D292C91FC30605006705B6 = {
 			isa = PBXGroup;
 			children = (
+				83D292E91FC317A0006705B6 /* SwiftBlockchain.playground */,
 				83D292D51FC30605006705B6 /* SwiftBlockchain */,
 				83D292D41FC30605006705B6 /* Products */,
+				83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */,
+				83D292E71FC306AC006705B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +81,22 @@
 				83D292D71FC30605006705B6 /* Info.plist */,
 			);
 			path = SwiftBlockchain;
+			sourceTree = "<group>";
+		};
+		83D292DF1FC306A3006705B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83D292E41FC306A3006705B6 /* CryptoSwift.framework */,
+				83D292E61FC306A3006705B6 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83D292E71FC306AC006705B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +125,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				83D292EC1FC31802006705B6 /* PBXTargetDependency */,
 			);
 			name = SwiftBlockchain;
 			productName = SwiftBlockchain;
@@ -109,12 +157,35 @@
 			mainGroup = 83D292C91FC30605006705B6;
 			productRefGroup = 83D292D41FC30605006705B6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 83D292DF1FC306A3006705B6 /* Products */;
+					ProjectRef = 83D292DE1FC306A3006705B6 /* CryptoSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				83D292D21FC30605006705B6 /* SwiftBlockchain */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		83D292E41FC306A3006705B6 /* CryptoSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CryptoSwift.framework;
+			remoteRef = 83D292E31FC306A3006705B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		83D292E61FC306A3006705B6 /* Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Tests.xctest;
+			remoteRef = 83D292E51FC306A3006705B6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		83D292D11FC30605006705B6 /* Resources */ = {
@@ -135,6 +206,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83D292EC1FC31802006705B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			targetProxy = 83D292EB1FC31802006705B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		83D292D91FC30605006705B6 /* Debug */ = {
