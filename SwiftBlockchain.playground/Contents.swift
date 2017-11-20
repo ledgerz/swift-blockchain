@@ -6,17 +6,17 @@ import CryptoSwift
 class Block {
     let index: Int
     let timeStamp: NSDate
-    let nonce: Int
-    let hash: String
     let previousHash: String
     let data: String
+    let nonce: Int
+    let hash: String
 
     private init(index: Int, previousHash: String, data: String) {
         self.index = index
         self.timeStamp = NSDate.init()
-        (self.nonce, self.hash) = findHashWithProofOfWork(data: data)
         self.previousHash = previousHash
         self.data = data
+        (self.nonce, self.hash) = findHashWithProofOfWork(index: index, timeStamp: timeStamp, previousHash: previousHash, data: data)
     }
 
     convenience init(previousBlock: Block, data: String) {
@@ -30,13 +30,13 @@ class Block {
 
 let difficulty = "00"
 
-func findHashWithProofOfWork(data: String) -> (nonce: Int, hash: String) {
+func findHashWithProofOfWork(index: Int, timeStamp: NSDate, previousHash: String, data: String) -> (nonce: Int, hash: String) {
     var nonce = 0
     var hash = ""
 
     while !hash.hasPrefix(difficulty) {
         nonce += 1
-        let inputForHash = String(nonce) + data
+        let inputForHash = String(nonce) + String(describing: timeStamp) + previousHash + data
         hash = inputForHash.sha256()
     }
 
